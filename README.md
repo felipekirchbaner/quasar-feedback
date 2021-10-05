@@ -23,10 +23,5 @@ cp .env.example .env
 quasar dev
 ```
 
-### Lint the files
-```bash
-yarn run lint
-```
-
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).

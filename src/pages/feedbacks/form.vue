@@ -23,7 +23,7 @@
           v-model="feedbackInput.user_id"
           emit-value
           map-options
-          :rules="[ val => val && val > 0 || 'Campo obrigatório']"
+          :rules="[ val => val || 'Campo obrigatório']"
         />
         <q-input
           fit
@@ -155,7 +155,7 @@ export default {
         this.updateFeedback(params)
       } else {
         this.storeFeedback(params).then(() => {
-          this.onReset()
+          this.$refs.feedbackForm.reset()
           this.$refs.feedbackForm.resetValidation()
         })
       }
